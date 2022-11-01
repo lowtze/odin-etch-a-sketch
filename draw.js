@@ -1,16 +1,31 @@
-let gridSize = 64;
+const boxes = document.querySelector("#boxes");
 
-for (let i = 1; i < gridSize + 1; i++) {
-  //console.log(i);
-  createBox();
+function createGrid() {
+  let gridSize = prompt("How many boxes per side?");
+
+  boxes.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+  boxes.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;  
+
+  for (let i = 0; i < gridSize * gridSize; i++) {
+    //console.log(i);
+    createBox();
+  }
 }
 
 function createBox() {
-  const boxes = document.querySelector("#boxes");
-  console.log(boxes);
+  //console.log(boxes);
   const newDiv = document.createElement("div");
-  newDiv.setAttribute("id", "box");
+  newDiv.setAttribute("class", "box");
   boxes.appendChild(newDiv);
-  console.log(newDiv);
+  //console.log(newDiv);
 }
 
+function clearGrid() {
+  boxes.innerHTML = "";
+}
+
+const genBtn = document.querySelector("#generate");
+genBtn.addEventListener("click", createGrid);
+
+const clearBtn = document.querySelector("#clear");
+clearBtn.addEventListener("click", clearGrid);

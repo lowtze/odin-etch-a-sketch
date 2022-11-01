@@ -20,14 +20,17 @@ button {
 
 #boxes {
   border: 2px solid black;
-  width: 320px;
-  height: 320px;
-  display: flex;
-  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr);
 }
 
 .box {
-  width: 20px;
-  height: 20px;
-  border: 2px solid red;
+  border: 2px solid tomato;
+}
+
+.box:hover {
+  background-color: black;
 }
