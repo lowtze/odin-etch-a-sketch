@@ -29,3 +29,11 @@ genBtn.addEventListener("click", createGrid);
 
 const clearBtn = document.querySelector("#clear");
 clearBtn.addEventListener("click", clearGrid);
+
+/*
+todos:
+
+- add color option
+- have color persist on click on each box
+- toggle colors
+*/
