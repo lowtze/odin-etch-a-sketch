@@ -22,4 +22,12 @@ button {
   border: 2px solid black;
   width: 320px;
   height: 320px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid red;
 }
